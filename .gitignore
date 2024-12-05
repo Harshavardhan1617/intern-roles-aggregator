@@ -1,3 +1,7 @@
 service/.venv
+service/aggregator/airflow/logs
+service/aggregator/airflow/airflow*
+service/aggregator/airflow/web*
+
 .env
 __pycache__
