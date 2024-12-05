@@ -65,6 +65,8 @@ def main():
         print(result.inserted_ids)
    except Exception :
         print("duplicates were found and skipped insertion")
+
+        
 if __name__ == "__main__":
     print("this is main function")
     main()
