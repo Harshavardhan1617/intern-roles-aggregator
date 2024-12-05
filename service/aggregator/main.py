@@ -8,9 +8,11 @@ def scraper(url):
     response.raise_for_status()
 
     soup = BeautifulSoup(response.content, "lxml")
+    print("parsed the html")
 
     internships = soup.find_all("div", class_=["container-fluid", "individual_internship"])
 
+    count = 0
     grouped_data = []
     for internship in internships:
         internship_id = internship.get("internshipid")
@@ -37,8 +39,11 @@ def scraper(url):
             "duration": duration,
             "stipend": stipend,
         })
+        count +=1
+        print(f"scraped {count} internships from internshala")
 
-    print(grouped_data[0])
+
+    print(grouped_data[-1])
 
 def main():
     scraper(url)
