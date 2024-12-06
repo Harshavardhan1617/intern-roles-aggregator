@@ -1,10 +1,24 @@
 # Steps to Reproduce Airflow Setup in a Python Virtual Environment
 
+This guide explains how to set up Apache Airflow in a Python virtual environment using Python 3.8.20. Follow these steps to get started.
+
+---
+
 ## Prerequisites
-- Python version: 3.8.20
-- Recommended version management: pyenv or asdf(prederred)
+1. **Python 3.8.20**: Ensure Python 3.8.20 is installed. Use **asdf** (preferred) or **pyenv** to set up the local Python version.
+2. **Virtual Environment**: Familiarity with creating and using Python virtual environments.
+
+---
 
 ## Setup Instructions
+
+### Step 0: Configure Python Version
+Set your Python version to **3.8.20**:
+- Using `asdf`:
+  ```bash
+  asdf install python 3.8.20
+  asdf local python 3.8.20
+
 
 ### 1. Set Up Python Environment
 ```bash
