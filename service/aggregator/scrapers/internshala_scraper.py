@@ -1,15 +1,5 @@
-import requests
-from bs4 import BeautifulSoup
-
-
-def scraper(url):
+def scraper(soup):
     try:
-        response = requests.get(url)
-        response.raise_for_status()
-
-        soup = BeautifulSoup(response.content, "lxml")
-        print("parsed the html")
-
         internships = soup.find_all("div", class_=["container-fluid", "individual_internship"])
 
         count = 0
@@ -43,6 +33,6 @@ def scraper(url):
             print(f"scraped {count} internships from internshala")
         return grouped_data
 
-    except requests.RequestException as e:
-        print(f"An error occurred: {e}")
+    except :
+        print("Error while transforming soup")
         return []
