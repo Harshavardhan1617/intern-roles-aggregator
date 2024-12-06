@@ -12,5 +12,4 @@ with DAG(dag_id="internships", start_date=datetime(2024, 12, 5), schedule="*/30 
     def airflow():
         print("airflow")
 
-    # Set dependencies between tasks
     hello >> airflow()
