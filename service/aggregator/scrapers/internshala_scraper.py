@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 
 
 def scraper(url):
-
     try:
         response = requests.get(url)
         response.raise_for_status()
