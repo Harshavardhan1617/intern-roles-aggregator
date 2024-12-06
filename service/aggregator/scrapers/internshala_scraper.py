@@ -30,7 +30,7 @@ def scraper(soup):
                 "stipend": stipend,
             })
             count +=1
-            print(f"scraped {count} internships from internshala")
+        print(f"scraped {count} internships from internshala")
         return grouped_data
 
     except :
