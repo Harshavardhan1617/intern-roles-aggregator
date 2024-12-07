@@ -7,6 +7,7 @@ import json
 import sys
 import tempfile
 import os
+import pendulum
 
 sys.path.append('/home/harsha/code/side_projects/tech_news_aggregator/service/aggregator')
 from loader import MongoLoader
@@ -24,7 +25,7 @@ with DAG(
     default_args=default_args,
     description='ETL workflow for Internshala scraper',
     schedule='0 9,21 * * *',  
-    start_date=datetime(2024, 1, 1),
+    start_date=pendulum.datetime(2024, 1, 1, tz="Asia/Kolkata"),
     catchup=False,
 ) as dag:
 
